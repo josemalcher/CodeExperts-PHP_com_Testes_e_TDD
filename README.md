@@ -20,7 +20,10 @@ https://codeexperts.com.br/
 
 ## <a name="parte1">1 - Introdução</a>
 
-
+- 01 - Introdução
+- 02 - Quem Sou Eu?
+- 03 - Ambiente & Links Importantes
+ 
 
 [Voltar ao Índice](#indice)
 
@@ -29,7 +32,37 @@ https://codeexperts.com.br/
 
 ## <a name="parte2">2 - Primeiros Passos com Testes</a>
 
+- 04 Introdução a Testes
+- 05 Iniciando Aplicação
+- 06 Configurnado Ambiente com PHPunit
 
+```
+{
+    "require": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Code\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    }
+}
+
+```
+```
+$ composer test
+> vendor/bin/phpunit
+PHPUnit 9.5.20 #StandWithUkraine
+
+No tests executed!
+
+```
+
+- 07 Executando Primeiros Testes
+- 08 Concluindo Primeiro Teste
 
 [Voltar ao Índice](#indice)
 
