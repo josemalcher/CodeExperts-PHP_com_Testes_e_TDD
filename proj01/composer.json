@@ -7,7 +7,7 @@
             "Code\\": "src/"
         }
     },
-    "scripts": {
-        "test": "vendor/bin/phpunit"
+    "config": {
+        "bin-dir": "bin/"
     }
 }

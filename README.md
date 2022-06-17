@@ -64,6 +64,80 @@ No tests executed!
 - 07 Executando Primeiros Testes
 - 08 Concluindo Primeiro Teste
 
+```json
+{
+    "require": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Code\\": "src/"
+        }
+    },
+    "config": {
+        "bin-dir": "bin/"
+    }
+}
+
+```
+
+```xml
+<phpunit bootstrap="vendor/autoload.php" colors="true">
+    <testsuites>
+        <testsuite name="Primeiro Teste">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
+```
+
+```php
+<?php
+
+namespace Code;
+
+use PHPUnit\Framework\TestCase;
+
+class ProdutoTest extends TestCase
+{
+    public function testSeONomeDoProdutoESetadoCorretamente()
+    {
+        $produto = new Produto();
+        $produto->setName('Produto 1');
+        $this->assertEquals('Produto 1', $produto->getName(), 'Valores não são iguais');
+    }
+    public function testSeOPrecoESetadoCorretamente()
+    {
+        $produto = new Produto();
+        $produto->setPrice(19.99);
+        $this->assertEquals(19.99, $produto->getPrice(), 'Valores Do Preço não batem');
+    }
+    public function testSeOSlugESetadoCorretamente()
+    {
+        $produto = new Produto();
+        $produto->setSlug('Produto_1');
+        $this->assertEquals('Produto_1', $produto->getSlug(), 'Valores do Slug Não Bate');
+    }
+}
+```
+
+```bash
+$ bin/phpunit --testdox
+PHPUnit 9.5.20 #StandWithUkraine
+
+Produto (Code\Produto)
+ ✔ Se o nome do produto e setado corretamente
+ ✔ Se o preco e setado corretamente
+ ✔ Se o slug e setado corretamente
+
+Time: 00:00.011, Memory: 6.00 MB
+
+OK (3 tests, 3 assertions)
+
+```
+
+
+
 [Voltar ao Índice](#indice)
 
 ---
