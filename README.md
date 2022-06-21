@@ -145,7 +145,11 @@ OK (3 tests, 3 assertions)
 
 ## <a name="parte3">3 - TDD - Test Driven Development</a>
 
-
+- 09 O que é TDD?
+- 10 Iniciando Testes com TDD
+- 11 Incrementando Carrinho de Compras com TDD
+- 12 Concluindo Carrinho de Compras com TDD
+- 13 Considerações Finais Módulo
 
 [Voltar ao Índice](#indice)
 
