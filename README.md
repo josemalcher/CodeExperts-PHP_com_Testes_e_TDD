@@ -184,6 +184,22 @@ class CarrinhoTest extends TestCase
 ```
 
 - 16 setUpBeforeClass & tearDownAfterClass
+
+```php
+ public static function setUpBeforeClass(): void
+    {
+        // função boa para abrir BD
+        print __METHOD__;
+
+    }
+
+    public static function tearDownAfterClass(): void
+    {
+        // função boa para fechar BD
+        print __METHOD__;
+    }
+```
+
 - 17 AssertPreConditions & AssertPostCondition
 - 18 Marcando testes como incompletos & pulando testes
 - 19 PHPUnit Annotations
