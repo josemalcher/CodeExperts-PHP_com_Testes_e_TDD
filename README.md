@@ -201,6 +201,21 @@ class CarrinhoTest extends TestCase
 ```
 
 - 17 AssertPreConditions & AssertPostCondition
+
+```php
+    protected function assertPreConditions(): void
+    {
+        // SE ESSE TESTE PASSAR... CONT...
+        $classe = class_exists('\\Code\\Carrinho');
+        $this->assertTrue($classe);
+    }
+
+    protected function assertPostConditions(): void
+    {
+        // executado sempre depois do teste e o método teardown
+    }
+```
+
 - 18 Marcando testes como incompletos & pulando testes
 - 19 PHPUnit Annotations
 - 20 Concluindo Módulo

@@ -13,7 +13,7 @@ class CarrinhoTest extends TestCase
     public function setUp(): void
     {
         $this->carrinho = new Carrinho();
-        $this->produto  = new Produto();
+        $this->produto = new Produto();
     }
 
     public function tearDown(): void
@@ -27,10 +27,22 @@ class CarrinhoTest extends TestCase
     // Visualizar Produtos
     // Total de produtos | Total Compra
 
-    public function testeSeClasseCarrinhoExiste()
+    /*    public function testeSeClasseCarrinhoExiste()
+        {
+            $classe = class_exists('\\Code\\Carrinho');
+            $this->assertTrue($classe);
+        }*/
+
+    protected function assertPreConditions(): void
     {
+        // SE ESSE TESTE PASSAR... CONT...
         $classe = class_exists('\\Code\\Carrinho');
         $this->assertTrue($classe);
+    }
+
+    protected function assertPostConditions(): void
+    {
+        // executado sempre depois do teste e o método teardown
     }
 
     public function testAdicaoDeProdutosNoCarrinho()
@@ -59,7 +71,7 @@ class CarrinhoTest extends TestCase
 
     public function testSeValoresDeProdutosNoCarrinhoEstaoCorretosCOnformaPassados()
     {
-        $produto =$this->produto;
+        $produto = $this->produto;
         $produto->setName('Produto 1');
         $produto->setPrice(19.99);
         $produto->setSlug('produto_1');
@@ -92,5 +104,5 @@ class CarrinhoTest extends TestCase
         $this->assertEquals(39.98, $carrinho->getTotalCompra());
     }
 
-    
+
 }
