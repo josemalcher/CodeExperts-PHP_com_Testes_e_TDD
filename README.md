@@ -158,7 +158,36 @@ OK (3 tests, 3 assertions)
 
 ## <a name="parte4">4 - PHPUnit - Ambiente e Melhorias</a>
 
+- 14 Introdução Módulo
+- 15 Métodos setUp & tearDown
 
+```php
+
+class CarrinhoTest extends TestCase
+{
+
+    private $carrinho;
+    private $produto;
+
+    public function setUp(): void
+    {
+        $this->carrinho = new Carrinho();
+        $this->produto  = new Produto();
+    }
+
+    public function tearDown(): void
+    {
+        unset($this->carrinho);
+        unset($this->produto);
+        // "destruct"
+    }
+```
+
+- 16 setUpBeforeClass & tearDownAfterClass
+- 17 AssertPreConditions & AssertPostCondition
+- 18 Marcando testes como incompletos & pulando testes
+- 19 PHPUnit Annotations
+- 20 Concluindo Módulo
 
 [Voltar ao Índice](#indice)
 
