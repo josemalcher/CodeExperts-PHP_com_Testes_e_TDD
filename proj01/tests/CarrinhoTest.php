@@ -104,5 +104,19 @@ class CarrinhoTest extends TestCase
         $this->assertEquals(39.98, $carrinho->getTotalCompra());
     }
 
+    public function testIncompleto()
+    {
+        $this->assertTrue(true);
+        $this->markTestIncomplete('Teste não esta completo'); // "Lembrebte de teste incompleto"
+    }
+
+    public function testSeFeatureEspecificaParaVersao53PHPTrabalhaDeFormaEsperada()
+    {
+        if (PHP_VERSION != 5.3) {
+            $this->markTestSkipped('Esse teste so roda para versão abaixo do PHP 7');
+        }
+        $this->assertTrue(true);
+    }
+
 
 }
