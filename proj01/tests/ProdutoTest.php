@@ -51,4 +51,19 @@ class ProdutoTest extends TestCase
         $produto->setSlug('Produto_1');
         $this->assertEquals('Produto_1', $produto->getSlug(), 'Valores do Slug Não Bate');
     }
+
+    /*
+     * @expectedException \InvalidArgumentException
+     * @expectedExceptionMessage Parâmetro Invalido, informe um SLUG
+     */
+    public function testSeSetSlugLancaExceptionQuandoNaoInformada()
+    {
+        $this->expectException('\InvalidArgumentException');
+        $this->expectExceptionMessage('Parâmetro Invalido, informe um SLUG');
+
+        $product = $this->produto;
+        $product->setSlug('');
+
+    }
+
 }

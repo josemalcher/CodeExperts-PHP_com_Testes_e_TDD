@@ -235,6 +235,37 @@ class CarrinhoTest extends TestCase
 ```
 
 - 19 PHPUnit Annotations
+
+```php
+    /**
+     * @requires PHP === 5.3
+     * */
+    public function testSeFeatureEspecificaParaVersao53PHPTrabalhaDeFormaEsperada()
+    {
+        /*if (PHP_VERSION != 5.3) {
+            $this->markTestSkipped('Esse teste so roda para versão abaixo do PHP 7');
+        }*/
+        $this->assertTrue(true);
+    }
+```
+
+```php
+    /*
+     * @expectedException \InvalidArgumentException
+     * @expectedExceptionMessage Parâmetro Invalido, informe um SLUG
+     */
+    public function testSeSetSlugLancaExceptionQuandoNaoInformada()
+    {
+        $this->expectException('\InvalidArgumentException');
+        $this->expectExceptionMessage('Parâmetro Invalido, informe um SLUG');
+
+        $product = $this->produto;
+        $product->setSlug('');
+
+    }
+```
+
+
 - 20 Concluindo Módulo
 
 [Voltar ao Índice](#indice)
