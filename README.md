@@ -275,7 +275,11 @@ class CarrinhoTest extends TestCase
 
 ## <a name="parte5">5 - Dublês de Teste: Stubs & Mocks</a>
 
-
+- 21 Introdução a Mocks & Stubs
+- 22 Falando sobre Stubs
+- 23 Criando Mock Objects (Objetos Falsos)
+- 24 Concluindo Mock
+- 25 Conclusões Módulo
 
 [Voltar ao Índice](#indice)
 

@@ -71,13 +71,18 @@ class CarrinhoTest extends TestCase
 
     public function testSeValoresDeProdutosNoCarrinhoEstaoCorretosCOnformaPassados()
     {
-        $produto = $this->produto;
+       /* $produto = $this->produto;
         $produto->setName('Produto 1');
         $produto->setPrice(19.99);
-        $produto->setSlug('produto_1');
+        $produto->setSlug('produto_1');*/
+
+        $produtoStub = $this->createMock(Produto::class);
+        $produtoStub->method('getName')->willReturn('Produto 1');
+        $produtoStub->method('getPrice')->willReturn('19.99');
+        $produtoStub->method('getSlug')->willReturn('produto_1');
 
         $carrinho = $this->carrinho;
-        $carrinho->addProduto($produto);
+        $carrinho->addProduto($produtoStub);
 
         $this->assertEquals('Produto 1', $carrinho->getProdutos()[0]->getName());
         $this->assertEquals(19.99, $carrinho->getProdutos()[0]->getPrice());
