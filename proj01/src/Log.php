@@ -6,6 +6,6 @@ class Log
 {
     public function log($message)
     {
-        return 'logando dados no sistema...' . $message;
+        return 'logando dados no sistema... ' . $message;
     }
 }
