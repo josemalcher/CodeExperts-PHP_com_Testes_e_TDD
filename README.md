@@ -288,7 +288,21 @@ class CarrinhoTest extends TestCase
 
 ## <a name="parte6">6 - Componente - QueryBuilder</a>
 
-
+- 26 Organizando Ambiente para o Componente
+- 27 Iniciando QueryBuilder
+- 28 Iniciando Testes da Classe Select
+- 29 Implementando Primeira Query Select
+- 30 Adicionando Condições em Nossa Query Select
+- 31 Adicionando a Possibilidade de Mais Condições Where
+- 32 OrderBy em Nosso Select
+- 33 Limit em Nosso Select
+- 34 Joins em Nosso Select
+- 35 Selecionando Colunas Desejadas em Nosso Select
+- 36 Criando Insert Query
+- 37 Criando Update Query pt1
+- 38 Criando Update Query pt2
+- 39 Criando Delete Query
+- 40 Melhorias no Select Query / Con
 
 [Voltar ao Índice](#indice)
 
