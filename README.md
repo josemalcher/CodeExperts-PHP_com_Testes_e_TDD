@@ -12,9 +12,10 @@ https://codeexperts.com.br/
 4. [PHPUnit - Ambiente e Melhorias](#parte4)     
 5. [Dublês de Teste: Stubs & Mocks](#parte5)     
 6. [Componente - QueryBuilder](#parte6)     
-7. [Testes com Banco de Dados - QueryBuilder / Executor]](#parte7)     
+7. [Testes com Banco de Dados - QueryBuilder Executor](#parte7)     
 8. [Componente - Router](#parte8)     
 9. [Publicando Pacotes](#parte9)     
+10. [10. Intervenção - Correções](#parte10)     
 ---
 
 
@@ -334,4 +335,11 @@ class CarrinhoTest extends TestCase
 [Voltar ao Índice](#indice)
 
 ---
+    
+## <a name="parte10">10. Intervenção - Correções</a>
 
+
+
+[Voltar ao Índice](#indice)
+
+---
