@@ -40,7 +40,7 @@ https://codeexperts.com.br/
 ```
 {
     "require": {
-        "phpunit/phpunit": "^9.5"
+        "phpunit/phpunit": "^8.5.42"
     },
     "autoload": {
         "psr-4": {
@@ -48,7 +48,7 @@ https://codeexperts.com.br/
         }
     },
     "scripts": {
-        "test": "vendor/bin/phpunit"
+        "test": "phpunit"
     }
 }
 
