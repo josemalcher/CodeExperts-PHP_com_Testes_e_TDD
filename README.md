@@ -278,9 +278,30 @@ class CarrinhoTest extends TestCase
 
 - 21 Introdução a Mocks & Stubs
 - 22 Falando sobre Stubs
+
+```php
+    public function testSeValoresDeProdutosNoCarrinhoEstaoCorretosCOnformaPassados()
+    {
+       /* $produto = $this->produto;
+        $produto->setName('Produto 1');
+        $produto->setPrice(19.99);
+        $produto->setSlug('produto_1');*/
+
+        $produtoStub = $this->createMock(Produto::class);
+        $produtoStub->method('getName')->willReturn('Produto 1');
+        $produtoStub->method('getPrice')->willReturn('19.99');
+        $produtoStub->method('getSlug')->willReturn('produto_1');
+```
+
 - 23 Criando Mock Objects (Objetos Falsos)
 - 24 Concluindo Mock
 - 25 Conclusões Módulo
+
+Resumo:
+
+- Teste Direto: Use para testar a própria classe Acessorio.
+- Stub: Use para testar a classe Carro, quando você precisa que a dependência Acessorio retorne um valor específico (ex: getNome() retornando "GPS").
+- Mock: Use para testar a classe Carro, quando você precisa verificar se a classe Carro chamou um método da dependência Acessorio de uma forma específica (ex: chamou setTipo() com o argumento "Eletrônico Crítico").
 
 [Voltar ao Índice](#indice)
 

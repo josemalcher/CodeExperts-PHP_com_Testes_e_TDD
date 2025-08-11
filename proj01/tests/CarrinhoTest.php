@@ -58,14 +58,21 @@ class CarrinhoTest extends TestCase
         $produto2->setPrice(44.99);
         $produto2->setSlug('produto_2');
 
+        $produto3 = $this->produto;
+        $produto3->setName('Produto 3');
+        $produto3->setPrice(99.99);
+        $produto3->setSlug('produto_3');
+
         $carrinho = $this->carrinho;
         $carrinho->addProduto($produto);
         $carrinho->addProduto($produto2);
+        $carrinho->addProduto($produto3);
 
         $this->assertIsArray($carrinho->getProdutos());
 
         $this->assertInstanceOf('\\Code\\Produto', $carrinho->getProdutos()[0]);
         $this->assertInstanceOf('\\Code\\Produto', $carrinho->getProdutos()[1]);
+        $this->assertInstanceOf('\\Code\\Produto', $carrinho->getProdutos()[2]);
 
     }
 
@@ -102,12 +109,18 @@ class CarrinhoTest extends TestCase
         $produto2->setPrice(19.99);
         $produto2->setSlug('produto_2');
 
+        $produto3 = new Produto();
+        $produto3->setName('Produto 3');
+        $produto3->setPrice(99.99);
+        $produto3->setSlug('produto_3');
+
         $carrinho = new Carrinho();
         $carrinho->addProduto($produto);
         $carrinho->addProduto($produto2);
+        $carrinho->addProduto($produto3);
 
-        $this->assertEquals(2, $carrinho->getTotalProdutos());
-        $this->assertEquals(39.98, $carrinho->getTotalCompra());
+        $this->assertEquals(3, $carrinho->getTotalProdutos());
+        $this->assertEquals(139.97, $carrinho->getTotalCompra());
     }
 
     public function testIncompleto()
