@@ -1,7 +1,11 @@
-<phpunit bootstrap="vendor/autoload.php" colors="true">
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/autoload.php"
+         colors="true"
+         verbose="true"
+         stopOnFailure="false">
     <testsuites>
-        <testsuite name="QueryBuilder">
-            <directory>tests</directory>
+        <testsuite name="Test Suite">
+            <directory suffix="Test.php">./test</directory>
         </testsuite>
     </testsuites>
 </phpunit>

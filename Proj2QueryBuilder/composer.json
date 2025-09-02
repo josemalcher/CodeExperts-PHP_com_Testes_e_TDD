@@ -9,5 +9,13 @@
   },
   "scripts": {
     "test": "phpunit"
+  },
+  "config": {
+    "bin-dir": "bin/"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "CodeTest\\": "test/"
+    }
   }
 }
